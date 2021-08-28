@@ -9,13 +9,13 @@ int main(int argc, char** argv) {
 	setlocale(LC_ALL, "spanish");
 	Multilista ml;
 	
-	//0 => "Ing. Eléctrica", 1 => "Ing. Electrónica",2 => "Ing. de Sistemas", 3 => "Ing. Industrial"
-	//0 => "Danza", 1=> "Natación", 2 => "Básquet", 3 => "Béisbol"
+	//0 => "Ing. Elï¿½ctrica", 1 => "Ing. Electrï¿½nica",2 => "Ing. de Sistemas", 3 => "Ing. Industrial"
+	//0 => "Danza", 1=> "Nataciï¿½n", 2 => "Bï¿½squet", 3 => "Bï¿½isbol"
 
 	ml.insertar("Raquel", 54, 1, 1);
 	ml.insertar("Jaime", 38, 1, 1);
 	ml.insertar("Arturo", 26, 1, 1);
-	ml.insertar("Andrés", 22, 1, 1);
+	ml.insertar("AndrÃ©s", 22, 1, 1);
 	ml.insertar("Ariana", 41, 1, 2);
 	ml.insertar("Juanny", 99, 1, 2);
 	ml.insertar("Mary Paz", 20, 1, 2);

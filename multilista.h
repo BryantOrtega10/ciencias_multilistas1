@@ -9,8 +9,8 @@ class Multilista {
 private:
 	int tam;
 	nodo* lista_cabezas[10];
-	string listaCarreras[4] = {"Ing. Eléctrica", "Ing. Electrónica","Ing. de Sistemas", "Ing. Industrial"};
-	string listaActividades[4] = { "Danza", "Natación","Básquet", "Béisbol" };
+	string listaCarreras[4] = {"Ing. Elï¿½ctrica", "Ing. Electrï¿½nica","Ing. de Sistemas", "Ing. Industrial"};
+	string listaActividades[4] = { "Danza", "Nataciï¿½n","Bï¿½squet", "Bï¿½isbol" };
 
 
 public:
@@ -130,7 +130,7 @@ void Multilista::buscar_nombre(string nombre) {
 		aux = aux->sig[0];
 	}
 	if (aux->nombre == nombre) {
-		cout << aux->nombre << "\t\t" << aux->edad << "\t" << *aux->carrera << "\t" << *aux->actividad << endl;
+		cout << aux->nombre <<setw(15)<<"\t" << aux->edad << "\t" << *aux->carrera << "\t" << *aux->actividad << endl;
 		return;
 	}
 	
@@ -145,13 +145,13 @@ void Multilista::listar(int i_cab) {
 	else if (i_cab == 8) i_sig = 0;
 	else if (i_cab >= 9) i_sig = 1;
 	else {
-		cout << "Opción invalida";
+		cout << "OpciÃ³n invalida";
 		return;
 	}
 
 	nodo* aux = lista_cabezas[i_cab];
 	while (aux != NULL) {
-		cout << aux->nombre << "\t\t" << aux->edad << "\t" << *aux->carrera << "\t" << *aux->actividad << endl;
+		cout << aux->nombre <<setw(15)<<"\t" << aux->edad << "\t" << *aux->carrera << "\t" << *aux->actividad << endl;
 		aux = aux->sig[i_sig];
 	}
 }
