@@ -4,6 +4,8 @@
 #include "multilista.h"
 #include <locale.h>
 
+//JOHAN
+
 int main(int argc, char** argv) {
 
 	setlocale(LC_ALL, "spanish");
@@ -32,6 +34,8 @@ int main(int argc, char** argv) {
 	cout << endl;
 
 	ml.buscar_nombre("Xiomara");
+	
+	
 
 	//ml.eliminar()
 
