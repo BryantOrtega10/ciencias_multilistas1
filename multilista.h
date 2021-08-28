@@ -9,8 +9,8 @@ class Multilista {
 private:
 	int tam;
 	nodo* lista_cabezas[10];
-	string listaCarreras[4] = {"Ing. El�ctrica", "Ing. Electr�nica","Ing. de Sistemas", "Ing. Industrial"};
-	string listaActividades[4] = { "Danza", "Nataci�n","B�squet", "B�isbol" };
+	string listaCarreras[4] = {"Ing. Elóctrica", "Ing. Electrónica","Ing. de Sistemas", "Ing. Industrial"};
+	string listaActividades[4] = { "Danza", "Natación","Básquet", "Béisbol" };
 
 
 public:
