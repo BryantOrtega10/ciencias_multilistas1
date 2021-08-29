@@ -130,7 +130,7 @@ void Multilista::buscar_nombre(string nombre) {
 		aux = aux->sig[0];
 	}
 	if (aux->nombre == nombre) {
-		cout << aux->nombre << "\t\t" << aux->edad << "\t" << *aux->carrera << "\t" << *aux->actividad << endl;
+		cout << aux->nombre << "\t \t" << aux->edad << "\t" << *aux->carrera << "\t" << *aux->actividad << endl;
 		return;
 	}
 	
@@ -151,7 +151,7 @@ void Multilista::listar(int i_cab) {
 
 	nodo* aux = lista_cabezas[i_cab];
 	while (aux != NULL) {
-		cout << aux->nombre << "\t\t" << aux->edad << "\t" << *aux->carrera << "\t" << *aux->actividad << endl;
+		cout << aux->nombre << "\t \t" << aux->edad << "\t" << *aux->carrera << "\t" << *aux->actividad << endl;
 		aux = aux->sig[i_sig];
 	}
 }
