@@ -5,6 +5,7 @@
 #include <locale.h>
 
 //JOHAN
+//MENU
 
 using namespace std;
 int main(int argc, char** argv) {
