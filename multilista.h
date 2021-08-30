@@ -10,31 +10,62 @@ class Multilista {
 private:
 	int tam;
 	nodo* lista_cabezas[10];
-	string listaCarreras[4] = { "Ing. El贸ctrica", "Ing. Electr贸nica","Ing. de Sistemas", "Ing. Industrial" };
-	string listaActividades[4] = { "Danza", "Nataci贸n","B谩squet", "B茅isbol" };
-
-
-public:
-	Multilista() {
-		for (int i = 0; i < 10; i++) {
-			lista_cabezas[i] = NULL;
-		}
-		tam = 0;
-	}
-	bool lista_vacia();
-	bool lista_llena();
-	int tam_lista();
-	void insertar(string nombre, int edad, int i_carrera, int i_actividad);
+	string listaCarreras[4];
+	string listaActividades[4];
 	void asignar_pos_nombre(nodo* nueva_persona);
 	void asignar_pos_edad(nodo* nueva_persona);
 	void asignar_pos_carrera(nodo* nueva_persona, int i_carrera);
 	void asignar_pos_actividad(nodo* nueva_persona, int i_actividad);
 
+public:
+	Multilista() {
+		tam = 0;
+	}
+	bool lista_vacia();
+	bool lista_llena();
+	int tam_lista();
+	void inicializarCabezas();
+	void insertar(string nombre, int edad, int i_carrera, int i_actividad);
 	void listar(int i_cab);
 	void buscar_nombre(string nombre);
-
 	bool eliminar(string nombre);
+	~Multilista();
 };
+
+Multilista::~Multilista() {
+	while (lista_cabezas[8] != NULL)
+	{
+		nodo* aux = lista_cabezas[8];
+		lista_cabezas[8] = aux->sig[0];
+		delete aux;
+	}
+}
+
+void Multilista::inicializarCabezas() {
+	listaCarreras[0] = "Ing. El閏trica";
+	listaCarreras[1] = "Ing. Electr髇ica";
+	listaCarreras[2] = "Ing. de Sistemas";
+	listaCarreras[3] = "Ing. Industrial";
+
+	listaActividades[0] = "Danza";
+	listaActividades[1] = "Nataci髇";
+	listaActividades[2] = "B醩quet";
+	listaActividades[3] = "B閕sbol";
+
+	for (int i = 0; i < 10; i++) {
+		lista_cabezas[i] = NULL;
+	}
+}
+
+bool Multilista::lista_vacia() {
+	return (tam == 0);
+}
+bool Multilista::lista_llena() {
+	return (tam > 0);
+}
+int Multilista::tam_lista() {
+	return tam;
+}
 
 void Multilista::insertar(string nombre, int edad, int i_carrera, int i_actividad) {
 	nodo* nueva_persona = new nodo;
@@ -144,9 +175,9 @@ void Multilista::listar(int i_cab) {
 	if (i_cab >= 0 && i_cab <= 3) i_sig = 2;
 	else if (i_cab >= 4 && i_cab <= 7) i_sig = 3;
 	else if (i_cab == 8) i_sig = 0;
-	else if (i_cab >= 9) i_sig = 1;
+	else if (i_cab == 9) i_sig = 1;
 	else {
-		cout << "Opci贸n invalida";
+		cout << "Opci髇 invalida";
 		return;
 	}
 
