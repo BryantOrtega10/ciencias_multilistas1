@@ -4,26 +4,25 @@
 #include "multilista.h"
 #include <locale.h>
 
-//JOHAN
-//MENU
-
 using namespace std;
 int main(int argc, char** argv) {
 
 	
 	setlocale(LC_ALL, "spanish");
 	Multilista ml;
+	ml.inicializarCabezas();
 	int opcion, edad, carrera, actividad;
 	string nombre;
 	bool volver;
 		
-	//0 => "Ing. Eléctrica", 1 => "Ing. Electrónica",2 => "Ing. de Sistemas", 3 => "Ing. Industrial"
-	//0 => "Danza", 1=> "Natación", 2 => "Básquet", 3 => "Béisbol"
+
+	//0 => "Ing. ElÃ©ctrica", 1 => "Ing. ElectrÃ³nica",2 => "Ing. de Sistemas", 3 => "Ing. Industrial"
+	//0 => "Danza", 1=> "NataciÃ³n", 2 => "BÃ¡squet", 3 => "BÃ©isbol"
 
 	ml.insertar("Raquel", 54, 1, 1);
 	ml.insertar("Jaime", 38, 1, 1);
 	ml.insertar("Arturo", 26, 1, 1);
-	ml.insertar("Andrés", 22, 1, 1);
+	ml.insertar("AndrÃ©s", 22, 1, 1);
 	ml.insertar("Ariana", 41, 1, 2);
 	ml.insertar("Juanny", 99, 1, 2);
 	ml.insertar("Mary Paz", 20, 1, 2);
@@ -36,7 +35,7 @@ int main(int argc, char** argv) {
 	cout << "\t \t ****** BIENVIDO ******"<<endl;
 
 	do{
-			cout << "\n \t ¿Que desea hacer?" <<endl;
+			cout << "\n \t Â¿Que desea hacer?" <<endl;
 			cout << "\n 1) Adicionar a una persona. \n 2) Ver el registro por orden Alfabetico. \n 3) Ver el registro por edades (Descendente)."
 	    	    "\n 4) Ver el registro por Actividad. \n 5) Ver el registro por Carrera. \n 6) Realizar una busqueda por Nombre."
 				"\n 7) Eliminar un registro. \n 8) Salir."<< endl;
@@ -151,8 +150,5 @@ int main(int argc, char** argv) {
 			}
 			system("PAUSE");
 	}while (true);
-
-
-
 	return 0;
 }
