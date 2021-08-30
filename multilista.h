@@ -42,15 +42,15 @@ Multilista::~Multilista() {
 }
 
 void Multilista::inicializarCabezas() {
-	listaCarreras[0] = "Ing. Eléctrica";
-	listaCarreras[1] = "Ing. Electrónica";
+	listaCarreras[0] = "Ing. ElÃ©ctrica";
+	listaCarreras[1] = "Ing. ElectrÃ³nica";
 	listaCarreras[2] = "Ing. de Sistemas";
 	listaCarreras[3] = "Ing. Industrial";
 
 	listaActividades[0] = "Danza";
-	listaActividades[1] = "Natación";
-	listaActividades[2] = "Básquet";
-	listaActividades[3] = "Béisbol";
+	listaActividades[1] = "NataciÃ³n";
+	listaActividades[2] = "BÃ¡squet";
+	listaActividades[3] = "BÃ©isbol";
 
 	for (int i = 0; i < 10; i++) {
 		lista_cabezas[i] = NULL;
@@ -177,7 +177,7 @@ void Multilista::listar(int i_cab) {
 	else if (i_cab == 8) i_sig = 0;
 	else if (i_cab == 9) i_sig = 1;
 	else {
-		cout << "Opción invalida";
+		cout << "OpciÃ³n invalida";
 		return;
 	}
 
